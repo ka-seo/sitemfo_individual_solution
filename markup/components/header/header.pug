@@ -1,0 +1,10 @@
+mixin header(data)
+    include ../contacts/contacts.pug
+
+    header.header(class=data.dop_class)
+        .header__left
+            a(href="index.html").logo
+                span ГУРУ
+                | МФО
+        .header__right
+            +contacts(data.contacts)

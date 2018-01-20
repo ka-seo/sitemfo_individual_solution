@@ -1,0 +1,54 @@
+.switch-pages {
+    max-width: 350px;
+    margin-top: 50px;
+    float: right;
+    position: relative;
+    z-index: 10;
+
+    @media (min-width: $breakpoint-lg) {
+        margin-top: -290px;
+        max-width: 220px;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+        margin-top: -235px;
+        max-width: 350px;
+    }
+
+
+    &__title {}
+
+    &__text {
+        max-width: 320px;
+        line-height: 1.5;
+    }
+
+    &__act {
+        a {
+            color: $color-primary;
+            text-decoration: none;
+        }
+    }
+}
+
+.link-arrow {
+    &:after {
+        content: '';
+        height: 11px;
+        width: 23px;
+        margin-left: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        background: url("%=static=%content/arrow_gold.svg") no-repeat;
+        transition: margin .2s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+
+        &:after {
+            margin-left: 15px;
+        }
+    }
+}
+

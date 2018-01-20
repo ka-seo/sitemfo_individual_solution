@@ -1,0 +1,33 @@
+/* Your custom fonts here */
+
+/* Example
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/Custom-Font.eot');
+    src: url('../fonts/Custom-Font.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Custom-Font.woff') format('woff'),
+         url('../fonts/Custom-Font.svg#custom_font') format('svg');
+    font-weight: 400;       // For normal width. It could has another value
+    font-style: normal;     // Also could has another value
+    }
+
+
+// Var for using custom font
+$CustomFont: 'CustomFont', Helvetica, Arial, sans-serif;
+*/
+$font-path: '../fonts';
+
+@font-face {
+    font-family: 'Kazimir Medium Italic';
+    src: url('#{$font-path}/Kazimir-MediumItalic.eot');
+    src: url('#{$font-path}/Kazimir-MediumItalic.woff2') format('woff2'),
+    url('#{$font-path}/Kazimir-MediumItalic.woff') format('woff'),
+    url('#{$font-path}/Kazimir-MediumItalic.ttf') format('truetype'),
+    url('#{$font-path}/Kazimir-MediumItalic.svg#Kazimir-MediumItalic') format('svg'),
+    url('#{$font-path}/Kazimir-MediumItalic.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+

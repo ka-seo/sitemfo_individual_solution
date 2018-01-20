@@ -1,0 +1,40 @@
+.contacts {
+    list-style: none inside;
+    margin: 0;
+    padding: 0;
+}
+.contact-item {
+    display:block;
+    font-weight: $f-weight-regular;
+    text-align: center;
+    font-size: 0.9375rem;
+
+    & + & {
+        margin-top: 15px;
+    }
+
+    a {
+        color: $color-primary;
+        text-decoration: none;
+
+        &:hover {
+            color:lighten($color-link, 10%);
+        }
+    }
+}
+
+
+@media (min-width: $breakpoint-sm) {
+    .contact-item {
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: $f-weight-light;
+        text-align: left;
+
+        & + & {
+            margin-left: 46px;
+            margin-top: 0;
+        }
+    }
+}
+

@@ -1,0 +1,55 @@
+.header {
+    padding: 36px 16px 0;
+    margin-bottom: 2.125rem;
+    width: 100%;
+    @include cf;
+
+    &--home {
+        margin-bottom: 3.125rem;
+    }
+
+    &__left,
+    &__right {
+        //border: 1px solid #ccc;
+    }
+    &__left {
+        display: none;
+    }
+
+    &__right {
+
+    }
+}
+
+.logo {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: $color-primary;
+
+    span {
+        font-weight: $f-weight-bold;
+    }
+
+}
+
+
+@media (min-width: $breakpoint-sm) {
+    .header {
+        padding: 46px 46px 0;
+        margin-bottom: 3.125rem;
+
+        &--home {
+            margin-bottom: 7.5rem;
+        }
+
+        &__left {
+            display: block;
+            float: left;
+        }
+
+        &__right {
+            float: right;
+            text-align: right;
+        }
+    }
+}

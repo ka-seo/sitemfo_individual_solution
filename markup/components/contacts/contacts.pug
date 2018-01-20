@@ -1,0 +1,6 @@
+mixin contacts(data)
+    .contacts
+        li.contact-item
+            a(href="mailto:" + data.email) #{data.email}
+        li.contact-item
+            a(href="tel:" + data.phone) #{data.phone}

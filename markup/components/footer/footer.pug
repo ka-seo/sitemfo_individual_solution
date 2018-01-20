@@ -1,0 +1,8 @@
+mixin footer(data)
+    include ../contacts/contacts.pug
+    footer.footer
+        .footer__left
+            +contacts(header.data.contacts)
+        .footer__right
+            | Проект принадлежит
+            a(href='http://dgppl.ru', target="_blank", rel="nofollow"): strong.company-name  Цифровым Людям.

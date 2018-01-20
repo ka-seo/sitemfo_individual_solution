@@ -1,0 +1,26 @@
+mixin form_order(data)
+        .container.form-order
+            .form-order__wrap
+                .form-order__header
+                    .title Оставьте заявку
+                    .subtitle На создание отличного сайта для Вашей Кредитной организации
+
+                form.form-order__fields#form-order(method="POST")
+                    .form-group
+                        label.form-label Ваше имя
+                        input.form-control(type="text", name="username", value="")
+                    .form-group
+                        label.form-label Телефон
+                        input.form-control(type="tel", name="phone", value="")
+                    .form-group
+                        label.form-label Email
+                        input.form-control(type="email", name="email", value="")
+                    .form-action
+                        button(type="submit").btn.btn-primary
+                            span.sent#sent
+                            span.error-send Ошибка
+                            span.loading
+                                span .
+                                span .
+                                span .
+                            span.default Перезвоните мне

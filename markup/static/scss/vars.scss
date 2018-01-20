@@ -1,0 +1,59 @@
+// File for scss-vars.
+// For example: main colors, paddings and so on.
+
+
+$f-weight-light: 300;
+$f-weight-regular: 400;
+$f-weight-medium: 500;
+$f-weight-bold: 700;
+
+$color-base: #fff;
+$color-primary: #BD9B5C;
+$color-secondary: #ff334c;
+$color-head: $color-base;
+$color-link: $color-primary;
+$color-link-hover: lighten($color-primary, 7%);
+$color-placeholder: #989898;
+$color-req: #ec5555;
+$color-success: $color-primary;
+$body-bg: #0C0C0C;
+
+$grad-1-0: #ff334c; // red
+$grad-1-1: #ff334c; // darken red
+$grad-2-0: #0064c5; // blue
+$grad-2-1: #1f79d6; // light-blue
+
+$font-name-1: 'Montserrat';
+$font-name-2: 'Kazimir Medium Italic';
+
+$font-base: $font-name-1, 'Arial', sans-serif;
+$font-head: $font-name-2, 'Arial', sans-serif;
+$font-strong: $font-name-1,'Arial', sans-serif;
+
+$font-size: 16px;
+
+$heading-h1: 1.875rem;
+$heading-h2: 1.65rem;
+$heading-h3: 1.45rem;
+$heading-h4: 1.25rem;
+$heading-h5: 1.125rem;
+$heading-h6: 1rem;
+
+$img: "img";
+//$font-path: "fonts";
+
+$footer-add: 0px;
+$footer-height: 210px;
+$footer-height-md: 0px;
+
+
+$breakpoint-xxl: 1440px;
+$breakpoint-xl: 1200px;
+$breakpoint-lg: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
+
+$container-xl: 1140px;
+$container-lg: 960px;
+$container-md: 720px;
+$container-sm: 540px;

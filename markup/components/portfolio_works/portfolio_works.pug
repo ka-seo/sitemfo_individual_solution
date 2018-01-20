@@ -1,0 +1,14 @@
+mixin portfolio_works(data)
+
+    each item, index in data
+        .work-item(class='work-item--' + index)
+            .work-item__image
+                a(href=item.link.url, target="_blank")
+                    img(src=item.image)
+                    span.work-item__image__hover
+                        span.work__view смотреть
+            .work-item__inner
+                h3.work-item__title #{item.title}
+                .work-item__descr #{item.descr}
+                .work-item__footer
+                    a(href=item.link.url).work__view смотреть

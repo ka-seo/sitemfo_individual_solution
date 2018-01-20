@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="17px" viewBox="0 0 19 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>user</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="landing-readysolution-copy" transform="translate(-192.000000, -1482.000000)" stroke="#BD9B5C" stroke-width="0.9">
+            <g id="goods" transform="translate(150.000000, 1188.000000)">
+                <g id="Group-8" transform="translate(43.000000, 291.000000)">
+                    <g id="user" transform="translate(0.000000, 4.000000)">
+                        <path d="M11.58,12.5772578 C9.15,12.1123005 9,11.5311039 9,11.0661467 L9,10.4849501 C9.59586678,9.93447541 10.0129183,9.22750767 10.2,8.45076204 C10.95,8.45076204 11.4,7.57896717 11.4,6.7071723 C11.4,6.47469367 11.4,5.54477914 10.8,5.54477914 C12.3,1.33110392 7.92,-0.267186675 4.8,1.76700136 C3.48,1.76700136 3.12,3.68495008 3.6,5.54477914 C3,5.54477914 3,6.47469367 3,6.7071723 C3,7.57896717 3.45,8.45076204 4.2,8.45076204 C4.38870783,9.22688817 4.80550981,9.93343282 5.4,10.4849501 L5.4,11.0661467 C5.4,11.5311039 5.25,12.1123005 2.82,12.5772578 C0.39,13.042215 0,15.1345227 0,15.1345227 L14.4,15.1345227 C14.4,15.1345227 14.4,13.1293945 11.58,12.5772578 Z" id="Shape"></path>
+                        <path d="M12.9,4.64957265 L17.7,4.64957265 M12.9,2.32478632 L17.7,2.32478632 M11.7,0 L17.7,0" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

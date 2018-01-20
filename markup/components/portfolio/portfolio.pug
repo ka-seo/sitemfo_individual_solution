@@ -1,0 +1,45 @@
+mixin portfolio(data)
+
+    include ../switch_pages/switch_pages.pug
+
+    .portfolio.container#portfolio-container
+        .portfolio__header
+            .title Примеры работ
+
+        .portfolio__list
+            .portfolio__item.portfolio__item-1.work
+                .work__square
+                    .work__img.parallax-1
+                        img(src="%=static=%img/content/work-macbook.png")
+                    .work__title Лайтфин
+                    .work__text МКК с выдачей на карту и онлайн скорингом. На системе учёта АФК.
+                    .work__action
+                        a.work__view(href="http://lightfin.ru", target="_blank") смотреть
+
+            .portfolio__item.portfolio__item-2.work
+                .work__square
+                    .work__img.parallax-2
+                        img.img-1(src="%=static=%img/content/work-iphone-1.png")
+                        img.img-2(src="%=static=%img/content/work-iphone-2.png")
+                    .work__title РубльВам
+                    .work__text МКК с выдачей на карту и онлайн скорингом. На системе учёта АФК.
+                    .work__action
+                        a.work__view(href="http://sitemfo.ru/portfolio/rubldam/", target="_blank") смотреть
+
+            .portfolio__item.portfolio__item-3.work
+                .work__square
+                    .work__img.parallax-3
+                        img(src="%=static=%img/content/work-ipad.png")
+                    .work__title Яверну
+                    .work__text МФК с выдачей на карту и онлайн скорингом. С созданием собственной Системы Учёта.
+                    .work__action
+                        a.work__view(href="http://sitemfo.ru/portfolio/yavernu", target="_blank") смотреть
+
+            .portfolio__more
+                .title Больше работ
+                p Можно увидеть в нашем портфолио
+                a(href="portfolio.html").link-arrow перейти
+
+            +switch_pages(switch_pages.data)
+
+

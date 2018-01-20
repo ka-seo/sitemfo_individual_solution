@@ -1,0 +1,228 @@
+.form-order {
+    margin-top: 150px;
+
+    @media (min-width: $breakpoint-lg) {
+        margin-top: 100px;
+    }
+
+    &__wrap {
+        margin-bottom: 100px;
+        border: 0.25rem solid $color-primary;
+
+        @media (max-width: $breakpoint-sm) {
+            margin-left: -14px;
+            margin-right: -14px;
+            border-left: 0;
+            border-right: 0;
+        }
+    }
+
+    &__header {
+        background-color: $body-bg;
+        padding: 0 16px;
+        margin: -58px auto 0;
+        max-width: 350px;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        font-family: $font-name-2;
+        color: $color-primary;
+        word-wrap: break-word;
+        text-align: center;
+
+        .subtitle {
+            font-family: $font-name-1;
+            font-weight: $f-weight-regular;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        span {
+            font-weight: $f-weight-bold;
+            padding: 0 5px;
+        }
+    }
+
+    &__gifts {
+        margin: 0 auto 45px;
+        text-align: center;
+        font-weight: $f-weight-medium;
+
+        .gift {
+            & + .gift {
+                margin-top: 10px;
+            }
+
+            img {
+                display: inline-block;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &__date {
+        margin: 0;
+        text-align: center;
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+        right: 0;
+
+        .get-date {
+            display: inline-block;
+            vertical-align: baseline;
+            margin-left: 8px;
+        }
+    }
+
+
+    &__fields {
+        margin: 60px auto 0;
+        text-align: center;
+
+        .form-group {
+            position: relative;
+            display: block;
+            width: 230px;
+            margin-left: auto;
+            margin-right: auto;
+
+            &:nth-child(2) {
+                margin: 20px auto;
+            }
+
+            span.error {
+                position: relative;
+                font-size: 12px;
+                text-align: left;
+                color: #ca3141;
+                margin-top: 4px;
+                display: block;
+            }
+
+            @media (min-width: $breakpoint-lg) {
+                width: auto;
+                display: inline-block;
+                vertical-align: middle;
+
+                &:nth-child(2) {
+                    margin: 0 12px;
+                }
+
+                span.error {
+                    position: absolute;
+                    left: 0;
+                    top: 83px;
+                    margin-top: 0;
+                }
+            }
+
+            .form-control {
+                width: 230px;
+                height: 54px;
+            }
+
+
+        }
+
+        .form-label {
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.688rem;
+            color: #aaa;
+            font-weight: $f-weight-medium;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        .form-control {
+            border: 0;
+            background-color: #1D1D1D;
+            color: $color-base;
+            padding: 6px 12px;
+            font-size: 0.938rem;
+            font-weight: $f-weight-medium;
+            border-radius: 0.313rem;
+            box-shadow: 0 1.313rem 1.813rem rgba(0, 0, 0, 0.03);
+            transition: background-color .2s ease-in-out;
+
+            &:focus {
+                background-color: lighten(#1D1D1D, 5%);
+                border-color: $color-primary;
+                outline: none !important;
+            }
+
+            &[readonly],
+            &[disabled]{
+                opacity: .75;
+                color: #aaa;
+            }
+
+            &.error {
+                background-color: #482020;
+            }
+
+        }
+
+
+        select.form-control {
+            background: #fff url("%=static=%content/triangle.svg") no-repeat;
+            background-position: right 12px center;
+            background-size: 9px 8px;
+            appearance: none;
+
+            &:-ms-expand {
+                display: none;
+            }
+        }
+
+        .form-action {
+            background-color: $body-bg;
+            padding: 0 16px;
+            margin: 90px auto -26px;
+            max-width: 250px;
+            text-align: center;
+        }
+    }
+}
+
+.error-send {
+    display: none;
+}
+
+.btn {
+    .progress {
+        display: none;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: .2;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .2;
+    }
+}
+.loading {
+    display: none;
+
+    span {
+        animation-name: blink;
+        animation-duration: 1.4s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+        line-height: 1px;
+        font-size: 60px;
+
+        &:nth-child(2) {
+            animation-delay: .2s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: .4s;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.cover {
+    width: 100%;
+    height: 75vw;
+    background: url('%=static=%content/cover.jpg') no-repeat center top;
+    background-size: 155% auto;
+    margin-top: 0px;
+    transition: background-size .2s ease-in-out;
+
+    @media (min-width: 510px) and (max-width: $breakpoint-sm) {
+        height: 75vw;
+        background-size: 155% auto;
+        margin-top: -40px;
+    }
+
+    @media (min-width: $breakpoint-sm) {
+        height: 70vw;
+        background-size: 155% auto;
+        margin-top: -40px;
+    }
+
+    @media (min-width: $breakpoint-md) {
+        height: 60vw;
+        background-size: 130% auto;
+        margin-top: -60px;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        height: 45vw;
+        background-size: 100% auto;
+        margin-top: -70px;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('%=static=%content/cover@2.jpg');
+    }
+}

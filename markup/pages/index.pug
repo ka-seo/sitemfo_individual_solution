@@ -1,0 +1,38 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head.pug
+    include ../components/header/header.pug
+    include ../components/hero/hero.pug
+    include ../components/advantages/advantages.pug
+    include ../components/feature/feature.pug
+    include ../components/portfolio/portfolio.pug
+    include ../components/form_order/form_order.pug
+    include ../components/footer/footer.pug
+
+    include ../components/float_panel/float_panel.pug
+    include ../components/notification/notification.pug
+
+    head
+        +head(head.defaults)
+
+    body.page
+        |%=symbols=%
+
+        //- Include your components here
+        +header(header.data)
+        +hero()
+        +advantages()
+        +feature()
+        +portfolio()
+        +form_order()
+        +footer()
+
+        +float_panel()
+        +notification()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

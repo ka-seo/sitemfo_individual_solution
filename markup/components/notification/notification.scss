@@ -1,0 +1,111 @@
+.notification {
+    display: none;
+    background-color: #1d1d1d;
+    box-shadow: 0 1.063rem 1.063rem rgba(0, 0, 0, 0.12);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    top: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 60;
+
+    transition: background .2s ease-in-out;
+
+    &:hover {
+        background-color: lighten(#1d1d1d, 5%);
+    }
+
+    &.hidden {
+        display: none !important;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        border-radius: 0.5rem;
+        text-align: left;
+        right: auto;
+        left: 2.5rem;
+        bottom: 2.5rem;
+        max-width: 23.75rem;
+    }
+
+
+    a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &__close {
+        display: block;
+        position: relative;
+        padding: 0;
+        margin:0;
+        top: -.5rem;
+        right: -.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        float: right;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        color: #fff;
+        background: transparent;
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 10;
+        outline: none !important;
+        transition: background .1s ease-in-out;
+
+        &:hover {
+            color: #fff;
+            background-color: #000;
+        }
+        //
+        //+ * {
+        //    clear: both;
+        //}
+    }
+
+    &__title {
+        display: block;
+        color: $color-primary;
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: 600;
+        margin-bottom: .5rem;
+    }
+
+    &__text {
+        display: block;
+        font-weight: 400;
+        font-size: .875rem;
+
+        @media (max-width: $breakpoint-lg) {
+            margin: 0 auto;
+            max-width: 21.25rem;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+
+.icon-arrow {
+    display: inline-block;
+    vertical-align: middle;
+    height: 0.6875rem;
+    width: 1.4375rem;
+    margin-left: .3125rem;
+    background: url("%=static=%content/arrow_white.svg") no-repeat;
+    -webkit-transition: margin .2s ease-in-out;
+    transition: margin .2s ease-in-out;
+}
+

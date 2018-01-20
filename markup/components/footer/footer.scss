@@ -1,0 +1,49 @@
+.footer {
+    padding: 36px 16px;
+    color: $color-primary;
+
+    @include cf;
+
+    &__left {
+        text-align: center;
+    }
+
+    &__right {
+        text-align: center;
+        font-size: 0.813rem;
+        font-weight: $f-weight-light;
+        margin-top: 16px;
+    }
+
+    a {
+        color: $color-primary;
+        text-decoration: none;
+
+        &:hover {
+            color:lighten($color-link, 10%);
+        }
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        .company-name {
+            display: block;
+        }
+    }
+
+    @media (min-width: $breakpoint-md) {
+        padding: 46px 46px;
+
+        &__left,
+        &__right {
+            text-align: left;
+            display: inline-block;
+            vertical-align: middle;
+            width: 49%;
+        }
+
+        &__right {
+            text-align: right;
+            margin-top: 0;
+        }
+    }
+}

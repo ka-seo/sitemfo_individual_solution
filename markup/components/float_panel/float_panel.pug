@@ -1,0 +1,21 @@
+mixin float_panel(data)
+    .panel-float.animation
+        button.btn.btn-primary.panel-float__button Оставить заявку
+        .popup.panel-float__popup
+            button.popup__close &times;
+            form#form-order-floating.popup__fields(method='POST')
+                .popup__field
+                    input.popup__input(type='text', name='username', value='', placeholder='Ваше имя', required='')
+                .popup__field
+                    input.popup__input(type='tel', name='phone', value='', placeholder='Телефон', required='')
+                .popup__field
+                    input.popup__input(type='email', name='email', value='', placeholder='Электронная почта', required='')
+                .popup__footer
+                    button.btn.btn-primary.popup__btn(type='submit')
+                        span.default Отправить
+                        span.loading
+                            span .
+                            span .
+                            span .
+                        span#sent-float.sent
+                        span.error-send Ошибка

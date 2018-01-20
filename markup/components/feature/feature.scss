@@ -1,0 +1,235 @@
+.feature {
+    margin-top: 60px;
+
+    &__header {
+        margin-left: 30px;
+        margin-bottom: 34px;
+
+        @media (min-width: $breakpoint-md) {
+            margin-left: 60px;
+        }
+    }
+
+    &__block {
+
+        &--view {
+
+            @media (min-width: $breakpoint-sm) {
+                padding-bottom: 60px !important;
+                background: url('%=static=%content/hand.svg') no-repeat right bottom -20px;
+                background-size: 150px;
+
+                .f-block__content {
+                    max-width: 230px;
+                }
+            }
+
+            //@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+            //    padding-bottom: 60px !important;
+            //    background-size: 57%;
+            //
+            //    .f-block__content {
+            //        max-width: 170px;
+            //    }
+            //}
+
+            @media (min-width: $breakpoint-md) {
+                padding-bottom: 117px !important;
+                background-size: 120px;
+
+                .f-block__content {
+                    max-width: 330px;
+                }
+            }
+
+            @media (min-width: $breakpoint-lg) {
+                padding-bottom: 117px !important;
+                background-size: 120px;
+
+                .f-block__content {
+                    max-width: 230px;
+                }
+            }
+
+        }
+
+        &--text {
+            @media (min-width: $breakpoint-md) {
+                .f-block__content {
+                    max-width: 500px;
+                }
+            }
+        }
+
+    }
+}
+
+
+.feature-list {
+    list-style: none inside;
+    margin: 46px 0 0;
+    padding: 0;
+
+
+    &__item {
+        position: relative;
+        padding-left: 36px;
+
+        line-height: 1.5;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: 20px;
+
+        @include cf;
+
+        & + & {
+            margin-top: 18px;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            .part-base {
+                float: left;
+                max-width: 370px;
+                margin-right: 20px;
+            }
+        }
+
+        .part-add {
+            margin: auto;
+        }
+    }
+
+    .dolg {
+        background-image: url('%=static=%content/dolg.svg');
+        background-size: 22px;
+        background-position-y: 5px;
+    }
+    .cards {
+        background-image: url('%=static=%content/cards.svg');
+        background-size: 22px;
+        background-position-y: 5px;
+    }
+    .user {
+        background-image: url('%=static=%content/user.svg');
+        background-size: 21px;
+        background-position-y: 5px;
+    }
+}
+
+.f-row {
+    display: block;
+    @include cf;
+
+    & + & {
+        margin-top: 16px;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        display: flex;
+        align-items: flex-start;
+
+        & + & {
+            margin-top: 16px;
+        }
+
+        .f-block--wide {
+            min-height: 380px;
+        }
+
+        &:last-child {
+            .f-block--narrow {
+                min-height: 330px;
+            }
+            .f-block--wide {
+                //min-height: 400px;
+            }
+        }
+
+        &:not(:last-child) {
+            .f-block--narrow {
+                min-height:330px;
+                max-height:330px;
+            }
+        }
+    }
+}
+
+.f-block {
+    background-color: #121212;
+    padding: 36px;
+    min-height: 200px;
+    //box-shadow: 0 0.938rem 1.875rem transparentize(#000, .93);
+
+    & + & {
+        margin-left: 0;
+        margin-top: 16px;
+    }
+
+    &--wide {
+        width: 100%;
+    }
+
+    &--narrow {
+        width: 95%;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        & + & {
+            margin-left: 16px;
+            margin-top: 0;
+        }
+
+        &--wide {
+            width: 66%;
+        }
+
+        &--narrow {
+            width: 34%;
+        }
+    }
+
+    &__title {
+        font-size: 1.175rem;
+        font-weight: $f-weight-bold;
+        line-height: 1.8rem;
+        margin-bottom: 25px;
+        word-wrap: break-word;
+
+        &:first-letter {
+            color: $color-primary;
+        }
+
+        @media (min-width: $breakpoint-sm) {
+            font-size: 1.375rem;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            span {
+                display: block;
+            }
+        }
+
+    }
+
+    &__content {
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
+}
+
+
+
+.title {
+    font-family: $font-name-2;
+    font-size: 1.5rem;
+    color: $color-primary;
+
+    span {
+        display: block;
+    }
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    font-weight: $f-weight-light;
+}

@@ -1,0 +1,198 @@
+.page-content {
+    padding-bottom: 4rem;
+
+    @media (min-width: $breakpoint-md) and (max-width: 1370px) {
+        padding-bottom: 6rem;
+    }
+}
+
+@media (min-width: $breakpoint-xxl) {
+    .container {
+        &--portfolio {
+            max-width: 1300px;
+        }
+    }
+}
+
+.portfolio-works {
+    //border: 1px solid;
+
+
+    @media (min-width: $breakpoint-md) {
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include flex-direction(row);
+        //@include justify-content(space-between);
+        @include align-items(flex-start); //center
+    }
+}
+
+.work-item {
+    display: block;
+
+    @media (min-width: $breakpoint-md) {
+        -ms-flex: 0 0 (100% / 2);
+        flex: 0 0 (100% / 2);
+        max-width: (100% / 2);
+    }
+
+    @media (min-width: $breakpoint-xl) {
+        -ms-flex: 0 0 (100% / 3);
+        flex: 0 0 (100% / 3);
+        max-width: (100% / 3);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 0 1.5rem;
+    }
+
+    &__inner {
+        margin-bottom: 5rem;
+
+        @media (min-width: $breakpoint-md) {
+            margin-bottom: 5.2vw;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            margin-bottom: 5rem;
+        }
+
+        @media (min-width: $breakpoint-xl) {
+            margin-bottom: 4.2vw;
+        }
+    }
+
+    &__image {
+        position: relative;
+        width: 78%;
+        margin: 0;
+        background-color: #1d1d1d;
+        border-radius: 0.625rem;
+        box-shadow: 0 0.563rem 2.25rem rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+
+        @media (min-width: $breakpoint-md) {
+            height: 9.375rem;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            height: 10.625rem;
+        }
+
+        @media (max-width: 375px){
+            width: 100%;
+        }
+
+        a {
+            display: block;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            height: auto;
+            transition: transform .2s ease-in-out;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.5, 1.5);
+            }
+
+            .work-item__image__hover {
+                background: transparentize(#000, .35);
+
+                .work__view {
+                    top: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -moz-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        &__hover {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: transparent;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            transition: .2s ease-in-out;
+
+            .work__view {
+                font-size: 1rem;
+                text-decoration: none !important;
+                background-size: 16px 10px;
+
+                white-space: nowrap;
+                color: white;
+                position: absolute;
+                overflow: hidden;
+                top: -30%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                -webkit-transition: .25s ease;
+                -moz-transition: .25s ease;
+                -ms-transition: .25s ease;
+                transition: .25s ease;
+            }
+        }
+    }
+
+    &__title {
+        margin: 1.125rem 0 1rem;
+        font-family: $font-base;
+        font-weight: $f-weight-bold;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        width: 78%;
+
+        &:first-letter {
+            color: $color-primary;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+        }
+
+        @media (max-width: 375px){
+            width: 90%;
+        }
+    }
+
+    &__descr {
+        font-size: .875rem;
+        line-height: 1.125rem;
+        max-width: 70%;
+
+        @media (min-width: $breakpoint-lg) {
+            font-size: .85rem;
+        }
+
+        @media (max-width: 375px){
+            max-width: 90%;
+            font-size: .875rem;
+        }
+    }
+
+    &__footer {
+        margin-top: 1rem;
+
+        @media (min-width: $breakpoint-lg) {
+            .work__view {
+                font-size: 1rem;
+                padding-left: 25px;
+                background-size: 17px 11px;
+            }
+        }
+    }
+}

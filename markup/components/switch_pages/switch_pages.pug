@@ -1,0 +1,6 @@
+mixin switch_pages(data)
+    .switch-pages
+        .switch-pages__title.title #{data.title}
+        p.switch-pages__text #{data.text}
+        .switch-pages__act
+            a.link-arrow(href=data.link.url, target=data.link.target) #{data.link.title}

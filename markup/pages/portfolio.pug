@@ -1,0 +1,29 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head.pug
+    include ../components/header/header.pug
+    include ../components/footer/footer.pug
+    include ../components/fixed_panel/fixed_panel.pug
+    include ../components/page_header/page_header.pug
+    include ../components/portfolio_works/portfolio_works.pug
+
+    head
+        +head(head.defaults)
+    body.page
+        |%=symbols=%
+
+        +header(header.portfolio)
+        +page_header()
+        .page-content
+            .container.container--portfolio
+                .portfolio-works
+                    +portfolio_works(portfolio_works.items)
+
+        +fixed_panel()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

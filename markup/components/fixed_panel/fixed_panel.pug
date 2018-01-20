@@ -1,0 +1,22 @@
+mixin fixed_panel(data)
+
+    .top-bar.fixed-panel
+        .top-bar__text Оставьте заявку на эффективный сайт для Вашей МКК или МФК
+        .top-bar__text--mobile Оставить заявку
+        form#bar-form.top-bar__form(action='')
+            .top-bar__form_close &times;
+            .top-bar__field
+                input.top-bar__input(type='text', name='username', placeholder='Ваше имя', required='')
+            .top-bar__field
+                input.top-bar__input(type='tel', name='phone', placeholder='Телефон', required='')
+            .top-bar__field
+                input.top-bar__input(type='email', name='email', placeholder='E-mail', required='')
+            .top-bar__field
+                button.btn.top-bar__button
+                    span.default Оставить заявку
+                    span#sent-1.sent
+                    span.loading
+                        span .
+                        span .
+                        span .
+                    span.error-send Ошибка
